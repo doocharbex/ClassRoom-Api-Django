@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'class_app',
     # <---Library--->
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,40 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
+
+# <--------Settings_Module_corsheaders----------->#
+CORS_ALLOWED_ORIGINS = [                          #
+    "http://localhost:8000",                      #
+    "http://127.0.0.1:8000",                      #
+    "null",                                       #
+]                                                 #
+# <------METHODS_API------>                       #
+CORS_ALLOWED_METHODS = [                          #
+    'DELETE',                                     #
+    'GET',                                        #
+    'OPTIONS',                                    #
+    'PATCH',                                      #
+    'POST',                                       #
+    'PUT',                                        #
+]                                                 #
+# <------Use_KEY_API------>                       #
+CORS_ALLOW_HEADERS = [                            #
+    'accept',                                     #
+    'api-key',                                    #
+    'accept-encoding',                            #
+    'authorization',                              #
+    'content-type',                               #
+    'dnt',                                        #
+    'origin',                                     #
+    'user-agent',                                 #
+    'x-csrftoken',                                #
+    'x-requested-with',                           #
+]                                                 #
+# <---------------------------------------------->#
+
 
 ROOT_URLCONF = 'class_room.urls'
 

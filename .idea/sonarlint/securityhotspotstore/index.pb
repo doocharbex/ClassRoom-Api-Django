@@ -23,5 +23,3 @@ B
 class_room/wsgi.py,4\2\428307ffb61c38280ec0c8e9de9a1bf7ce495268
 H
 class_app/serializers.py,2\a\2a153fdf1e0e6c6aed76c4d107536fdf60d1bc7c
-L
-class_room/monkey_patches.py,f\a\fa178485eee07f1aef4ef55652109495f54e17ba
