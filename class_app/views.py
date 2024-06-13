@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import CoursesModel
+from .serializers import CoursesModelSerializer
 
-# Create your views here.
+
+# <---View Data Courses --->
+class CoursesListCreateAPIView(generics.ListCreateAPIView):
+    queryset = CoursesModel.objects.all()
+    serializer_class = CoursesModelSerializer
+
