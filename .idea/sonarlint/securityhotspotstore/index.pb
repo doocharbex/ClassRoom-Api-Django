@@ -13,3 +13,7 @@ F
 class_room/settings.py,0\0\00df95f5b51bbde5afe0a6d21cf420c4dc76e3ee
 B
 class_app/views.py,e\f\ef8cb7114e3c968ea5b10c345a0d3fd3c1e51969
+A
+class_app/urls.py,b\0\b0d07bb8f04c42e3dd147970fb2bb3931531bd5c
+B
+class_room/urls.py,8\b\8b0f0dee9af03dc56b79bfc9e970ed639c8d2045
