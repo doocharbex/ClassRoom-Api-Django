@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # <--- Tabel Database "CoursesModel"--->
 class CoursesModel(models.Model):
     name = models.CharField(max_length=30)
@@ -7,6 +8,7 @@ class CoursesModel(models.Model):
 
     def __str__(self):
         return self.name
+
 
 # <--- Tabel Database "StudentClassModel" --->
 class StudentClassModel(models.Model):
