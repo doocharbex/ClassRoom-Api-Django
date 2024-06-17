@@ -12,8 +12,10 @@ Backend developed for data management and data processing of your classroom   Su
 # Section Footer
 ![Cover](imageReadme/Annotation%202024-06-14%20170s740.png)
 
+
 # Section View json 
-![Cover](imageReadme/Annotatiossn 2024-06-17 160042.png)
+![Cover](imageReadme/Annotatiossn%202024-06-17%20160042.png)
+
 
 -------------------------
 # Run Project 
@@ -38,6 +40,7 @@ Backend developed for data management and data processing of your classroom   Su
 <h5 style="color: #ff7878">If it was the default port, use port 8080 </h5>
 <h5 style="color: #ff7878">python manage.py runserver 8080</h5>
 -------------------------
+
 # Developers
 
 <h3 style="color: #505050">Dayan Ghanbari</h5>
