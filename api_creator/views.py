@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views import View
 from .forms import APICreationForm
@@ -25,7 +25,10 @@ def api_list(request):
 
 @login_required
 def add_data(request, api_id):
-    api = API.objects.get(id=api_id)
+    api = get_object_or_404(API, id=api_id)
+    if api.user != request.user:
+        return redirect('api_list')
+
     if request.method == 'POST':
         data = request.POST.get('data')
         APIData.objects.create(api=api, data=data)
@@ -34,6 +37,24 @@ def add_data(request, api_id):
 
 @login_required
 def api_data_list(request, api_id):
-    api = API.objects.get(id=api_id)
+    api = get_object_or_404(API, id=api_id)
+    if api.user != request.user:
+        return redirect('api_list')
+
     data = APIData.objects.filter(api=api)
     return render(request, 'api_creator/api_data_list.html', {'api': api, 'data': data})
+
+@login_required
+def edit_api(request, api_id):
+    api = get_object_or_404(API, id=api_id)
+    if api.user != request.user:
+        return redirect('api_list')
+
+    if request.method == 'POST':
+        form = APICreationForm(request.POST, instance=api)
+        if form.is_valid():
+            form.save()
+            return redirect('api_list')
+    else:
+        form = APICreationForm(instance=api)
+    return render(request, 'api_creator/edit_api.html', {'form': form})
