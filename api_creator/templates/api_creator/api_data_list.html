@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data for {{ api.name }}</title>
+</head>
+<body>
+    <h2>Data for {{ api.name }}</h2>
+    <ul>
+        {% for data in data %}
+            <li>{{ data.data }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_data' api.id %}">Add new Data</a>
+</body>
+</html>

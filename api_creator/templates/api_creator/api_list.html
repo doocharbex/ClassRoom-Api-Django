@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API List</title>
+</head>
+<body>
+    <h2>API List</h2>
+    <ul>
+        {% for api in apis %}
+            <li><a href="{% url 'api_data_list' api.id %}">{{ api.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_api' %}">Create new API</a>
+</body>
+</html>

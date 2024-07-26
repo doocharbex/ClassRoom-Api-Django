@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Data to {{ api.name }}</title>
+</head>
+<body>
+    <h2>Add Data to {{ api.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="data" rows="10"></textarea>
+        <button type="submit">Add Data</button>
+    </form>
+</body>
+</html>
